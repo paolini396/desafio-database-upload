@@ -20,10 +20,10 @@ export default class AddCategoryIdToTransactions1588350575846
     await queryRunner.createForeignKey(
       'transactions',
       new TableForeignKey({
-        name: 'TransactionsCategory',
         columnNames: ['category_id'],
         referencedColumnNames: ['id'],
         referencedTableName: 'categories',
+        name: 'TransactionsCategory',
         onDelete: 'SET NULL',
         onUpdate: 'CASCADE',
       }),
